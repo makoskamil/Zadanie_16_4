@@ -10,7 +10,22 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                loader: "babel-loader"
+                loader: "babel-loader",
+                options: {
+                    plugins: env !== 'production' ? ["react-hot-loader/babel"] : []
+                }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    { loader: 'style-loader'},
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true
+                        }
+                    }
+                ]
             }
         ]
     }
