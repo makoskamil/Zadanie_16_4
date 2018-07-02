@@ -1,10 +1,6 @@
 {
   "presets": [
-    "env", {
-        "targets": {
-            "browser": ["last 2 versions", "safari >=7"]
-        }
-    }
+    "env",
     "react",
     "stage-0"
   ],
